@@ -66,7 +66,7 @@ export default function ImageBanner() {
         <div>
           <div>
             <h3>Welcome to</h3>
-            <h1>The KellyBytes Store</h1>
+            <h1>The Kelly Store</h1>
           </div>
           <div>
             <button>Shop stickers</button>

@@ -1,24 +1,14 @@
 'use client';
 import { useState } from 'react';
 import Portal from './Portal';
+import { useProducts } from '@/context/ProductContent';
 
-useState;
-export default function Products() {
+export default function Products(props) {
+  const { planner, stickers } = props;
   const [portalImage, setPortalImage] = useState(null);
+  const { handleIncrementProduct, cart } = useProducts();
 
-  const stickerDescriptions = {
-    CSS_HTML_JavaScript:
-      'Core web technologies for structure, styling, interactivity.',
-    Docker: 'Platform for containerizing, deploying, and scaling applications.',
-    Firebase: 'Cloud platform for databases, authentication, and app backend.',
-    NextJS: 'React-based framework for server-side rendering and static sites.',
-    NodeJS: 'JavaScript runtime for building scalable backend applications.',
-    PostgreSQL:
-      'Robust open-source database with advanced querying capabilities.',
-    ReactJS: 'JavaScript library for building interactive user interfaces.',
-  };
-
-  const stickers = Object.keys(stickerDescriptions);
+  if (!stickers.length || !planner) return null;
 
   return (
     <>
@@ -77,7 +67,14 @@ export default function Products() {
               </li>
             </ul>
             <div className="purchase-btns">
-              <button>Add to cart</button>
+              <button
+                onClick={() => {
+                  const plannerPriceId = planner.default_price;
+                  handleIncrementProduct(plannerPriceId, 1, planner);
+                }}
+              >
+                Add to cart
+              </button>
             </div>
           </div>
         </div>
@@ -90,26 +87,36 @@ export default function Products() {
         </div>
         <div className="sticker-container">
           {stickers.map((sticker, stickerIndex) => {
+            const stickerName = sticker.name;
+            const stickerUrl = stickerName
+              .replaceAll(' Sticker.png', '')
+              .replaceAll(' ', '_');
             return (
               <div key={stickerIndex} className="sticker-card">
                 <button
-                  onClick={() => setPortalImage(sticker)}
+                  onClick={() => setPortalImage(stickerUrl)}
                   className="img-button"
                 >
                   <img
-                    src={`/low_res/${sticker}.jpeg`}
-                    alt={`${sticker}-low-res`}
+                    src={`/low_res/${stickerUrl}.jpeg`}
+                    alt={`${stickerUrl}-low-res`}
                   />
                 </button>
                 <div className="sticker-info">
-                  <p className="text-medium">
-                    {sticker.replaceAll('_', ' ')} Sticker.png
-                  </p>
-                  <p>{stickerDescriptions[sticker]}</p>
+                  <p className="text-medium">{stickerName}</p>
+                  <p>{sticker.description}</p>
                   <h4>
-                    <s>$</s>4.99
+                    <span>$</span>
+                    {sticker.prices[0].unit_amount / 100}
                   </h4>
-                  <button>Add to cart</button>
+                  <button
+                    onClick={() => {
+                      const stickerPriceId = sticker.prices[0].id;
+                      handleIncrementProduct(stickerPriceId, 1, sticker);
+                    }}
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </div>
             );

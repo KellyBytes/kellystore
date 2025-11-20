@@ -7,7 +7,7 @@ export default function Cart() {
   const numProducts = Object.keys(cart).reduce((acc, curr, currIndex) => {
     // const numProduct = cart[curr]; // cart内のcurrキーの値 = 個数
     const numProduct = cart[curr].quantity; // cart内のcurrキーのquantity値
-    const sum = acc + numProduct;
+    const sum = acc + parseInt(numProduct);
     return sum;
   }, 0);
 
@@ -17,7 +17,8 @@ export default function Cart() {
         <i className="fa-solid fa-bag-shopping"></i>
         {numProducts > 0 && (
           <div className="cart-num">
-            <p>{numProducts}</p>
+            <p>{numProducts < 11 ? numProducts : '10+'}</p>
+            {/* <p>{numProducts}</p> */}
           </div>
         )}
       </Link>

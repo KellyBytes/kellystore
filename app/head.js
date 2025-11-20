@@ -2,6 +2,12 @@ export default function Head() {
   return (
     <head>
       <link rel="icon" href="/favicon.png" sizes="any" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+        crossOrigin=""
+      />
       <link
         href="https://fonts.googleapis.com/css?family=Eczar:regular,500,600,700,800"
         rel="stylesheet"

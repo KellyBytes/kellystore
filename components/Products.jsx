@@ -24,7 +24,7 @@ export default function Products(props) {
         </Portal>
       )}
       <div className="section-container">
-        <div className="section-header">
+        <div id="planner-section" className="section-header">
           <h2>Shop Our Selection</h2>
           <p>From organization or accessorization</p>
         </div>
@@ -81,7 +81,7 @@ export default function Products(props) {
       </div>
 
       <div className="section-container">
-        <div className="section-header">
+        <div id="stickers-section" className="section-header">
           <h2>Or Collect Your Favorite Tech</h2>
           <p>Choose from our custom designed tech logos</p>
         </div>

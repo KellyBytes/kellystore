@@ -166,6 +166,7 @@ sticker-header {
 .section-header {
   margin: 1rem auto;
   margin-top: 5rem;
+  scroll-margin-top: 8rem;
 }
 
 .planner-container {

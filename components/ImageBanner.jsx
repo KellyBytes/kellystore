@@ -69,8 +69,22 @@ export default function ImageBanner() {
             <h1>The Kelly Store</h1>
           </div>
           <div>
-            <button>Shop stickers</button>
-            <button>Shop planner</button>
+            <button
+              onClick={() => {
+                const el = document.getElementById('planner-section');
+                el?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Shop planner
+            </button>
+            <button
+              onClick={() => {
+                const el = document.getElementById('stickers-section');
+                el?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Shop stickers
+            </button>
           </div>
         </div>
       </div>

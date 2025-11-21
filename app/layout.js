@@ -44,11 +44,14 @@ export default function RootLayout({ children }) {
               <div className="links-container">
                 <div>
                   <h3>KellyBytes</h3>
-                  <Link href={'/'} target="_blank">
-                    KellyBytes Hub
+                  <Link href={'https://kellybytes.netlify.app'} target="_blank">
+                    Portfolio Website
                   </Link>
-                  <Link href={'/'} target="_blank">
-                    Roadmap
+                  <Link
+                    href={'https://github.com/KellyBytes/kellystore'}
+                    target="_blank"
+                  >
+                    Code on GitHub
                   </Link>
                 </div>
                 <div>
@@ -58,8 +61,8 @@ export default function RootLayout({ children }) {
                 </div>
                 <div>
                   <h3>Support</h3>
-                  <Link href={'/contact'}>Contact</Link>
-                  <Link href={'/faq'}>FAQs</Link>
+                  <Link href={'/contact'}>Contact (UC)</Link>
+                  <Link href={'/faq'}>FAQs (UC)</Link>
                 </div>
               </div>
               <div className="socials">

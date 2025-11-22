@@ -22,25 +22,35 @@ export async function getProducts() {
 
 export default async function Home() {
   const products = await getProducts();
-  console.log(products);
+  console.log('Products: ', products);
 
   let planner = null;
   let stickers = [];
+  let templates = [];
+  let icons = [];
 
   for (let product of products) {
     if (product.name === 'Medieval Dragon Month Planner') {
       planner = product;
-      continue;
+    } else if (product.name.includes('Template')) {
+      templates.push(product);
+    } else if (product.name.includes('Icon')) {
+      icons.push(product);
+    } else {
+      stickers.push(product);
     }
-
-    stickers.push(product);
   }
 
   return (
     <>
       <ImageBanner />
       <section>
-        <Products planner={planner} stickers={stickers} />
+        <Products
+          planner={planner}
+          stickers={stickers}
+          templates={templates}
+          icons={icons}
+        />
       </section>
     </>
   );

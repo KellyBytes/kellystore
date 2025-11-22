@@ -5,10 +5,11 @@ import Link from 'next/link';
 import Cart from '@/components/Cart';
 import EmailInput from '@/components/EmailInput';
 import ProductsProvider from '@/context/ProductContent';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 export const metadata = {
   title: 'KellyStore',
-  description: 'A super cool store for programmers and productivity fiends!',
+  description: 'Tiny templates. Big productivity.',
 };
 
 export default function RootLayout({ children }) {
@@ -22,9 +23,11 @@ export default function RootLayout({ children }) {
             <header>
               <div className="header-content">
                 <Link href={'/'}>
-                  <h1>KellyStore</h1>
+                  <h2>KellyStore</h2>
                 </Link>
-                <h5 className="mid-text">- Cool stuff for cool people -</h5>
+                <h6 className="mid-text">
+                  Boost your productivity, beautifully
+                </h6>
                 <Cart />
               </div>
             </header>
@@ -45,13 +48,13 @@ export default function RootLayout({ children }) {
                 <div>
                   <h3>KellyBytes</h3>
                   <Link href={'https://kellybytes.netlify.app'} target="_blank">
-                    Portfolio Website
+                    Portfolio
                   </Link>
                   <Link
                     href={'https://github.com/KellyBytes/kellystore'}
                     target="_blank"
                   >
-                    Code on GitHub
+                    GitHub
                   </Link>
                 </div>
                 <div>
@@ -96,6 +99,7 @@ export default function RootLayout({ children }) {
               </div>
             </footer>
           </div>
+          <ScrollToTopButton />
         </body>
       </html>
     </ProductsProvider>

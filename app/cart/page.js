@@ -51,13 +51,11 @@ export default function CartPage() {
           const itemData = cart[item];
           const itemQuantity = itemData?.quantity;
 
-          const imgName =
-            itemData.name === 'Medieval Dragon Month Planner'
-              ? 'planner'
-              : itemData.name
-                  .replaceAll(' Sticker.png', '')
-                  .replaceAll(' ', '_');
-          const imgUrl = '/low_res/' + imgName + '.jpeg';
+          const imgName = itemData.name
+            .replaceAll(' Template', '.png')
+            .replaceAll(' Icon', '.jpeg')
+            .replaceAll(' ', '_');
+          const imgUrl = '/low_res/' + imgName;
 
           return (
             <div key={itemIndex} className="cart-item">
@@ -94,7 +92,7 @@ export default function CartPage() {
         })}
       </div>
       <div className="total text-medium">
-        <strong>{`Total $${total}`}</strong>
+        <strong>{`Total $${total.toFixed(2)}`}</strong>
       </div>
       <div className="checkout-container">
         <Link href={'/'}>

@@ -28,32 +28,16 @@ export default function ImageBanner() {
 
   return (
     <div className="banner-images">
-      {/* <img
-        className="low-res-img"
-        src="/low_res/banner.jpeg"
-        alt="banner-low-res"
-      /> */}
-      {/* <img
-        ref={imgRef}
-        className="high-res-img"
-        src="/med_res/banner.png"
-        alt="banner-high-res"
-        style={{ opacity: isLoaded ? 1 : 0 }}
-        onLoad={() => {
-          // when the high resolution image is completely loaded, this callback function will be executed and the intention is to get it to take this initially invisible image, and now make it visible
-          setIsLoaded(true);
-        }}
-      /> */}
       <Image
         className="low-res-img"
-        src="/low_res/banner.jpeg"
+        src="/low_res/banner-v2.jpeg"
         alt="banner-low-res"
         fill
       />
       <Image
         ref={imgRef}
         className="high-res-img"
-        src="/med_res/banner.png"
+        src="/med_res/banner-v2.png"
         alt="banner-high-res"
         fill
         style={{ opacity: isLoaded ? 1 : 0 }}
@@ -71,19 +55,19 @@ export default function ImageBanner() {
           <div>
             <button
               onClick={() => {
-                const el = document.getElementById('planner-section');
+                const el = document.getElementById('templates-section');
                 el?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Shop planner
+              Shop templates
             </button>
             <button
               onClick={() => {
-                const el = document.getElementById('stickers-section');
+                const el = document.getElementById('icons-section');
                 el?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Shop stickers
+              Shop icons
             </button>
           </div>
         </div>

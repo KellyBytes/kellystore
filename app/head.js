@@ -1,7 +1,12 @@
 export default function Head() {
   return (
     <head>
-      <link rel="icon" href="/favicon.png" sizes="any" />
+      <link rel="icon" href="/favicon.ico" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
         rel="preconnect"
@@ -9,11 +14,11 @@ export default function Head() {
         crossOrigin=""
       />
       <link
-        href="https://fonts.googleapis.com/css?family=Eczar:regular,500,600,700,800"
+        href="https://fonts.googleapis.com/css?family=Merriweather:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic"
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css?family=Grenze:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
         rel="stylesheet"
       />
       <link

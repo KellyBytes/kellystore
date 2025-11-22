@@ -9,10 +9,10 @@ const stripe = new Stripe(API_KEY, {
 export async function GET() {
   try {
     // fetch all the active products from stripe
-    const products = await stripe.products.list({ active: true });
+    const products = await stripe.products.list({ active: true, limit: 50 });
 
     //fetch all the prices that are active
-    const prices = await stripe.prices.list({ active: true });
+    const prices = await stripe.prices.list({ active: true, limit: 50 });
 
     // combine the products and their associated prices (商品ごとに複数の値段を含めたオブジェクトを作る)
     const combinedData = products.data.map((product) => {

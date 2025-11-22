@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KellyStore | E-Commerce Web App [↗️](https://main.d3vz3aed5z659y.amplifyapp.com/ "Click to launch KellyStore")
 
-## Getting Started
+### 📸 Screenshots
 
-First, run the development server:
+<img src="./public/images/kellystore-desktop.png" width="600">
+<img src="./public/images/kellystore-mobile.png" width="600">
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 💡 Overview
+
+**KellyStore** is a full-stack e-commerce web application for **printable PDF productivity templates** and **hand-drawn PNG icons** designed to motivate creativity and organization.
+
+Although my background is primarily front-end development, this project marks a major milestone into **full-stack engineering**, including:
+
+- **Secure Stripe checkout** via server-side API routes
+- **AWS Amplify hosting** for both frontend + backend (Netlify incompatible due to backend endpoints)
+- Real storefront experience using Stripe Test Mode⚡
+*(no real charges, but checkout + dashboard logs are 100% functional)*
+
+This app brings together design, UX, and real-world payment processing in one polished product.
+
+<br/>
+
+## 🛍 Products Include
+
+- **Printable PDF templates**
+  - Ivy Lee Method Template
+  - Bullet Journal Template
+  - Gratitude Journal Template
+- **Minimal hand-drawn PNG icons**
+  - Goal, Idea, Milestone, ...
+
+More items coming soon!
+
+<br/>
+
+## 🚀 Key Features
+
+- Full shopping cart functionality (add / update / remove items)
+- **Stripe Checkout** powered by secure API routes
+- Responsive layout optimized for all devices
+- Server-rendered product data from Stripe
+- Email subscription UI for future engagement
+- Simple, elegant UX with lightweight styling
+
+<br/>
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|------|------------|
+| Frontend | **Next.js 14 (App Router), React** |
+| Styling | TCSS, FantaCSS |
+| Backend | Next.js Route Handlers (serverless) |
+| Payments | Stripe API |
+| Deployment | AWS Amplify |
+
+<br/>
+
+## 🔐 Stripe Payment Flow
+
+```
+flowchart LR
+User --> Cart --> Checkout
+Checkout -->|POST line items| API_Route
+API_Route --> Stripe
+Stripe -->|RedirectToCheckout| HostedPaymentPage
+Stripe -->|Success / Cancel| App
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br/>
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🧩 What I Learned
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Secure server-side Stripe integration with **Checkout Sessions**
+- Mapping multiple Stripe **Prices** per **Product**
+- Managing cloud environment variables & CI/CD deployment
+- Data-driven UI updates using React Context API
+- Better UX for digital product purchasing
 
-## Learn More
+<br/>
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 Future Roadmap
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Auto-delivery of downloadable files
+- Auth + purchase history
+- Product filtering + categories
+- Stripe Webhooks for fulfillment automation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<br/>
 
-## Deploy on Vercel
+## ▶ Live Demo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🔗 https://main.d3vz3aed5z659y.amplifyapp.com/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+[🔼 Back to Top](#KellyStore--E-Commerce-Web-App-)

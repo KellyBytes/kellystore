@@ -77,7 +77,7 @@ export default function Products(props) {
       <div className="section-container">
         <div id="icons-section" className="section-header">
           <h2>Or Collect Your Favorite Icons</h2>
-          <p>Choose from our handwritten icons for projects</p>
+          <p>Choose from our hand-drawn icons for projects</p>
         </div>
         <div className="icon-container">
           {icons.map((icon, iconIndex) => {

@@ -96,4 +96,4 @@ Stripe -->|Success / Cancel| App
 
 ---
 
-[🔼 Back to Top](#KellyStore--E-Commerce-Web-App-)
+[🔼 Back to Top](#kellystore--e-commerce-web-app)

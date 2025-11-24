@@ -1,4 +1,4 @@
-# KellyStore | E-Commerce Web App [↗️](https://main.d3vz3aed5z659y.amplifyapp.com/ "Click to launch KellyStore")
+# KellyStore | E-Commerce Web App [➚](https://main.d3vz3aed5z659y.amplifyapp.com/ "Click to launch KellyStore")
 
 ### 📸 Screenshots
 

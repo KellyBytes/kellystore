@@ -329,12 +329,15 @@ main,
 
 .cart-item {
   display: flex;
+  align-items: start;
   gap: 1rem;
 }
 
 .cart-item img {
   width: 30%;
-  height: fit-content;
+  /* height: fit-content; */
+  height: auto;
+  object-fit: contain;
 }
 
 .cart-item-info {

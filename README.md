@@ -28,6 +28,7 @@ This app brings together design, UX, and real-world payment processing in one po
   - Ivy Lee Method Template
   - Bullet Journal Template
   - Gratitude Journal Template
+  - Recipe Template
 - **Minimal hand-drawn PNG icons**
   - Goal, Idea, Milestone, ...
 
@@ -51,7 +52,7 @@ More items coming soon!
 | Layer | Technology |
 |------|------------|
 | Frontend | **Next.js 14 (App Router), React** |
-| Styling | TCSS, FantaCSS |
+| Styling | CSS, FantaCSS |
 | Backend | Next.js Route Handlers (serverless) |
 | Payments | Stripe API |
 | Deployment | AWS Amplify |
